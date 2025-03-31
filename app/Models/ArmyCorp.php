@@ -9,4 +9,10 @@ class ArmyCorp extends Model
     use HasFactory;
 
     protected $fillable = ['denomination'];
+
+    public function soldiers (){
+        return $this->hasMany('App\Models\Soldier');
+    }
+
+
 }
